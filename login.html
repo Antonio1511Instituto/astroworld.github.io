@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/cssLogin.css">
+
+  <title>Login Astroworld</title>
+</head>
+
+<body>
+  <div class="container-fluid py-2">
+
+    <script src="js/bootstrap.js"></script>
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg bg-opacity-10 text-white  rounded-4" style="backdrop-filter: blur(50px) brightness(150%); ">
+      <div class="container-fluid">
+        <a class="navbar-brand rounded-3" href="#" >
+          <img src="media/index/astroworld_logo.png" alt="Logo" width="170" height="30" style="object-fit: cover;" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+              <h2 class=" text-white m-0 h4" href="index.html">Bienvenido a Astroworld</h2>
+              
+        </div>
+        <div class="d-flex">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Boton index -->
+            <li class="nav-item">
+              <a class="nav-link text-white" href="index.html">Pagina principal</a>
+            </li>
+          
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- FIN NAVBAR -->
+
+
+
+
+    <div class="logo">
+      <img src="media/astroworld_logo.png" alt="" height="238px" width="422px">
+    </div>
+
+    <form id="login" class="principal container-fluid py-3  rounded-4 color-white"  style="backdrop-filter: blur(50px) brightness(150%); " action="index.html">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Nombre</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+          aria-describedby="basic-addon1" id="nombre">
+          <div id="user-feed" class="invalid-feedback" style="text-align: left;">
+            Usuario no encontrado
+          </div>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Contraseña</span>
+        <input type="password" class="form-control" placeholder="Contrasena" aria-label="Contrasena"
+          aria-describedby="basic-addon1" id="contrasena">
+          <div id="pass-feed" class="invalid-feedback" style="text-align: left;">
+            Contraseña incorrecta
+          </div>
+      </div>
+
+      <div class="input-group">
+        
+        <button onclick="obtenerDatos()" class="btn btn-outline-light" type="button" id="botonIniciarSesion">
+          Iniciar Sesion
+        </button>
+        
+      </div>
+    </form>
+  </div>
+  <script type="text/javascript" src="js/login.js"></script>
+
+  <div class="footer text-white fixed-bottom m-2 rounded-5" style="backdrop-filter: blur(50px) brightness(150%); ">
+    <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-white">Proyecto Astroworld</span>
+      </div>
+  
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-muted" href="https://www.twitter.com"><img src="media/twitter.png" class="bi" width="20" height="20"></a></li>
+        <li class="ms-3"><a class="text-muted" href="https://www.instagram.com"><img src="media/instagram.png" class="bi" width="20" height="20"></a></li>
+        <li class="ms-3"><a class="text-muted" href="https://www.facebook.com"><img src="media/facebook.png" class="bi" width="24" height="24"></a></li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

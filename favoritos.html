@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/cssProducto.css">
+    <title>Producto Astroworld</title>
+</head>
+<body>
+    <div class="container-fluid p-2">
+      <script>
+
+        //Comprueba si hay una sesion de la pagina
+        //En caso de sesion cambia al boton de cerrar sesion
+        //En caso de no haber sesion muestra el boton de login
+        function checkSession(){
+          let session = sessionStorage.getItem('astroworld');
+          if(session){
+            document.getElementById('btn-login').style.display = 'none';
+            document.getElementById('btn-logout').style.display = 'block';
+          }else{
+            document.getElementById('btn-login').style.display = 'block';
+            document.getElementById('btn-logout').style.display = 'none';
+          }
+        }
+        
+        //Funcion del boton del login
+        function botonLogin(){
+          event.preventDefault;
+          console.log('Sesion iniciada')
+        }
+        //Funcion del boton del logout
+        function botonLogout(){
+          document.getElementById('a-logout').setAttribute.href = "#";
+          event.preventDefault;
+          event.preventDefault;
+          sessionStorage.removeItem('astroworld')
+          console.log('Sesion cerrada')
+          checkSession();
+          document.getElementById('a-logout').setAttribute.href = "login.html";
+        }
+      </script>
+        <nav class="navbar navbar-expand-lg bg-opacity-10 text-white  rounded-4" style="backdrop-filter: blur(50px) brightness(150%); ">
+          <div class="container-fluid">
+            <a class="navbar-brand rounded-3" href="#" >
+              <img src="media/index/astroworld_logo.png" alt="Logo" width="170" height="30" style="object-fit: cover;" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Boton index -->
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="index.html">Pagina principal</a>
+                </li>
+                <!-- Boton favoritos -->
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="favoritos.html">Favoritos</a>
+                </li>
+              </ul>
+              <div class="d-flex" role="search">
+                <!-- Boton login -->
+                <button id="btn-login" class="btn btn-outline-light nav-item" onclick="botonLogin()">
+                  <a class="nav-link active " aria-current="page" href="login.html">Iniciar sesion</a>
+                </button>
+                <!-- Boton cerrar session -->
+                <button id="btn-logout" class="btn btn-outline-danger nav-item" onclick="botonLogout()" style="display: none;">
+                  <a id="a-logout" class="nav-link active" aria-current="page" href="login.html">Cerrar sesion</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </div>
+    <div class="logo">
+      <img src="media/tu_top_artistas.png" alt="" height="238px" width="422px">
+    </div>
+  <!-- TOP 1 ARTISTA-->>
+  <div id="cantantesFavoritos" class="container-fluid">
+    
+
+  </div>
+ 
+
+
+    <div class="logo">
+      <img src="media/tu_top_canciones.png" alt="" height="238px" width="422px">
+    </div>
+
+    <!-- TOP 1 Cancion-->>
+  <div id="cancionesFavoritos" class="container-fluid">
+    
+
+  </div>
+   
+
+         <!-- FOOTER-->>
+    <div class="footer text-white  m-2 rounded-5" style="backdrop-filter: blur(50px) brightness(150%); max-height: 5rem; ">
+      <footer class="d-flex flex-wrap justify-content-center align-items-center py-2 my-2">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-white">Proyecto Astroworld</span>
+        </div>
+    
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-muted" href="https://www.twitter.com"><img src="media/twitter.png" class="bi" width="20" height="20"></a></li>
+          <li class="ms-3"><a class="text-muted" href="https://www.instagram.com"><img src="media/instagram.png" class="bi" width="20" height="20"></a></li>
+          <li class="ms-3"><a class="text-muted" href="https://www.facebook.com"><img src="media/facebook.png" class="bi" width="24" height="24"></a></li>
+        </ul>
+      </footer>
+    </div>
+    <script type="text/javascript" src="js/favoritos.js"></script>
+    <script>
+      checkSession();
+      crearListaCantantes();
+      crearListaCanciones();
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body{
+    background-image: url('../media/fondo_login.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+.logo{
+    text-align: center;
+    
+    margin-top: -2%;
+    
+  }
+  .footer{
+   
+   margin-top: 65.55vh;
+   
+  }
+  .border{
+    text-align: center;
+    display: flex;
+    justify-content:center ;
+  }
